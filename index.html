@@ -18,6 +18,7 @@
     />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <script src="./javascripts/index.js"></script>
 
     <title>Frontend Mentor | Job Listings</title>
   </head>
@@ -26,68 +27,16 @@
       <img src="./images/bg-header-desktop.svg" />
     </header>
 
-    <div id="job-list">
-      <script>
-        main();
+    <div class="job-list-wrapper">
+      <div
+        class="job-item-wrapper"
+        id="job-filter"
+        style="justify-content: start; gap: 20px; border-left: none"
+      >
+        <div id="clear-filter" onclick="clearFilter()">Clear</div>
+      </div>
 
-        async function main() {
-          const data = await getData();
-
-          const jobList = document.querySelector("#job-list");
-
-          for (const i of data) {
-            jobList.innerHTML += `<div class="job-item-wrapper">
-                  <div class="job-item-inner">
-                    <div class="job-img">
-                      <img src=${i.logo} alt=${i.company} />
-                    </div>
-                    <div class="job-desc">
-                      <div class='job-desc-inner'>
-                        <div class='company-name'>
-                          ${i.company}
-                        </div>
-                        <div class='tag-list'>
-                          ${
-                            i.new
-                              ? `<button class="tag-title title-new">NEWS</button>`
-                              : ``
-                          }
-                          ${
-                            i.featured
-                              ? `<button class="tag-title title-feauture">FEATURED</button>`
-                              : ``
-                          }
-                        </div>
-                      </div>
-
-                      <div class='position-info'>
-                        ${i.position}
-                      </div>
-
-                      <div class='info-optional'>
-                        <span>${i.postedAt}</span>
-                        <span>${i.contract}</span>
-                        <span>${i.location}</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class='languages'>
-                    ${i.languages
-                      .map((e) => `<button class="tag-btn">${e}</button>`)
-                      .join("")}
-                  </div>
-                </div>`;
-          }
-        }
-
-        async function getData() {
-          const res = await fetch("./data.json");
-          const data = await res.json();
-
-          return data;
-        }
-      </script>
+      <div id="job-list"></div>
     </div>
   </body>
 </html>

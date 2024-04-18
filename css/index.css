@@ -4,21 +4,71 @@ body {
   font-size: 15px;
 }
 
+.job-list-wrapper {
+  padding: 0px 100px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#job-filter {
+  margin-top: -30px;
+}
+
+.job-filter-item {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.filter-name {
+  color: hsl(180, 29%, 50%);
+  padding: 6px;
+  background-color: hsl(180, 29%, 90%);
+  border-radius: 3px 0px 0px 3px;
+}
+
+.remove-icon {
+  background-color: hsl(180, 29%, 40%);
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  border-radius: 0px 3px 3px 0px;
+}
+
+.remove-icon:hover {
+  background-color: hsl(180, 29%, 10%);
+}
+
 #job-list {
-  padding: 50px 100px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+#clear-filter {
+  position: absolute;
+  top: 40%;
+  right: 30px;
+  color: hsl(180, 29%, 50%);
+}
+
+#clear-filter:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .job-item-wrapper {
-  padding: 30px;
+  position: relative;
+  padding: 30px 100px 30px 30px;
   display: flex;
   border-left: 4px solid hsl(180, 29%, 40%);
   background-color: white;
   justify-content: space-between;
   align-items: center;
   border-radius: 6px;
+  box-shadow: 0 4px 8px 0 hsl(180, 29%, 70%), 0 6px 40px 0 hsl(180, 29%, 90%);
+  flex-wrap: wrap;
 }
 
 .job-item-inner {
@@ -76,10 +126,6 @@ body {
   border: none;
   color: hsl(180, 29%, 50%);
   font-weight: 700;
-}
-
-.tag-btn::after {
-  content: "";
 }
 
 .tag-btn:hover {
