@@ -1,0 +1,106 @@
+body {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 15px;
+}
+
+#job-list {
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.job-item-wrapper {
+  padding: 30px;
+  display: flex;
+  border-left: 4px solid hsl(180, 29%, 40%);
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.job-item-inner {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.job-image {
+  border-radius: 50%;
+}
+
+.job-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job-desc-inner {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.company-name {
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+}
+
+.tag-list {
+  display: flex;
+  gap: 5px;
+}
+
+.tag-title {
+  border-radius: 16px;
+  background-color: black;
+  color: white;
+  padding: 3px 7px;
+}
+
+.title-new {
+  background-color: hsl(180, 29%, 50%);
+}
+
+.title-featured {
+  background-color: black;
+}
+
+.tag-btn {
+  padding: 6px;
+  background-color: hsl(180, 29%, 90%);
+  border-radius: 4px;
+  border: none;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+}
+
+.tag-btn::after {
+  content: "";
+}
+
+.tag-btn:hover {
+  color: white;
+  background-color: hsl(180, 29%, 50%);
+  cursor: pointer;
+}
+
+.position-info {
+  font-size: 20px;
+  color: hsl(180, 29%, 60%);
+  font-weight: 700;
+}
+
+.info-optional {
+  display: flex;
+  gap: 30px;
+  color: hsl(180, 8%, 52%);
+}
+
+.languages {
+  display: flex;
+  gap: 10px;
+}
