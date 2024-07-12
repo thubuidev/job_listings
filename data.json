@@ -42,7 +42,7 @@
     "contract": "Part Time",
     "location": "USA Only",
     "languages": ["JavaScript"],
-    "tools": ["React", "Sass"]
+    "tools": ["React", "Sass", "Django", "RoR", "Vue"]
   },
   {
     "id": 4,
