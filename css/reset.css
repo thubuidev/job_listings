@@ -130,4 +130,5 @@ button {
 body {
   background-color: hsl(180, 52%, 96%);
   max-width: 1440px;
+  margin: 0 auto;
 }
